@@ -3,6 +3,7 @@ use std::{collections::HashMap, path::PathBuf};
 use cli_core::rivet_api::models;
 use global_error::prelude::*;
 use serde::{Deserialize, Serialize};
+use uuid::Uuid;
 use tokio::{
 	fs,
 	sync::{Mutex, OnceCell},
@@ -26,6 +27,8 @@ pub struct ProjectMeta {
 	pub telemetry: Telemetry,
 	#[serde(default)]
 	pub tokens: Tokens,
+	#[serde(default)]
+	pub opengb: OpenGb,
 }
 
 #[derive(Default, Serialize, Deserialize)]
@@ -70,6 +73,29 @@ pub struct DevelopmentToken {
 	pub hostname: String,
 	pub ports: HashMap<String, models::CloudMatchmakerDevelopmentPort>,
 	pub token: String,
+}
+
+#[derive(Default, Serialize, Deserialize)]
+pub struct OpenGb {
+	#[serde(default)]
+	pub projects: HashMap<Uuid, OpenGbProject>,
+}
+
+#[derive(Default, Clone, Serialize, Deserialize)]
+pub struct OpenGbProject {
+	#[serde(default)]
+	pub environments: HashMap<Uuid, OpenGbEnv>,
+}
+
+#[derive(Default, Clone, Serialize, Deserialize)]
+pub struct OpenGbEnv {
+	#[serde(default)]
+	pub databases: HashMap<String, OpenGbDatabase>,
+}
+
+#[derive(Serialize, Clone, Deserialize)]
+pub struct OpenGbDatabase {
+	pub url: String,
 }
 
 static SINGLETON: OnceCell<Mutex<GlobalConfig>> = OnceCell::const_new();

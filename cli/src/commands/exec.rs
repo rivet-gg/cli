@@ -1,4 +1,4 @@
-use crate::util::{cmd, term};
+use crate::util::cmd;
 use clap::Parser;
 use global_error::prelude::*;
 
@@ -23,7 +23,7 @@ pub struct Opts {
 
 impl Opts {
 	pub async fn execute(&self, ctx: &cli_core::Ctx) -> GlobalResult<()> {
-		term::status::warn(
+		rivet_term::status::warn(
 			"EXPERIMENTAL",
 			"`rivet exec` is experimental and subject to change",
 		);
