@@ -3,11 +3,11 @@ use std::{collections::HashMap, path::PathBuf};
 use cli_core::rivet_api::models;
 use global_error::prelude::*;
 use serde::{Deserialize, Serialize};
-use uuid::Uuid;
 use tokio::{
 	fs,
 	sync::{Mutex, OnceCell},
 };
+use uuid::Uuid;
 
 use super::paths;
 
