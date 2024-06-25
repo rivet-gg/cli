@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.0](https://github.com/rivet-gg/cli/compare/v1.3.2...v1.4.0) (2024-06-25)
+
+
+### Features
+
+* add --skip-migrate flag to opengb deploy ([#262](https://github.com/rivet-gg/cli/issues/262)) ([6255e07](https://github.com/rivet-gg/cli/commit/6255e0770dcea42d97b26357559fd0672257e675))
+
+
+### Bug Fixes
+
+* **opengb:** one db per env ([#256](https://github.com/rivet-gg/cli/issues/256)) ([a3c4e10](https://github.com/rivet-gg/cli/commit/a3c4e109d6ec316fc72c296b97efa4ef1aef11f9))
+
 ## [1.3.2](https://github.com/rivet-gg/cli/compare/v1.3.1...v1.3.2) (2024-06-13)
 
 
