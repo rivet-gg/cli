@@ -5,6 +5,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.1-rc.6](https://github.com/rivet-gg/toolchain/compare/v2.0.0-rc.6...v2.0.1-rc.6) (2024-10-08)
+
+
+### Bug Fixes
+
+* **deno-embed:** accept github token to increase rate limits ([#566](https://github.com/rivet-gg/toolchain/issues/566)) ([7d59328](https://github.com/rivet-gg/toolchain/commit/7d59328c2de342835422fae17769a13ff663970f))
+* gracefully handle all ffi unwraps ([#562](https://github.com/rivet-gg/toolchain/issues/562)) ([9cb8253](https://github.com/rivet-gg/toolchain/commit/9cb825362d1d434184a26ee983dc478341af392a))
+* revert back to using native cp ([#569](https://github.com/rivet-gg/toolchain/issues/569)) ([598d2e5](https://github.com/rivet-gg/toolchain/commit/598d2e51f85a7365e2121e4481bbf626475cefe7))
+* **toolchain:** disable term color by default for backend ([#564](https://github.com/rivet-gg/toolchain/issues/564)) ([a39d231](https://github.com/rivet-gg/toolchain/commit/a39d2317f0bf98ce6597f1032dbcf401941c892c))
+* **toolchain:** fix backend-embed build on windows ([#565](https://github.com/rivet-gg/toolchain/issues/565)) ([e106174](https://github.com/rivet-gg/toolchain/commit/e106174de91537a2ea9425125e62522367ff4408))
+
+
+### Chores
+
+* **backend:** format ([#568](https://github.com/rivet-gg/toolchain/issues/568)) ([ace84b7](https://github.com/rivet-gg/toolchain/commit/ace84b7a4c6be72654c73b4ff88860183cf983d6))
+* bundle postgres & fix github rate limit issue ([#567](https://github.com/rivet-gg/toolchain/issues/567)) ([a6e373d](https://github.com/rivet-gg/toolchain/commit/a6e373d69253a110d9f6c2c5fe7b70cfc65bc910))
+* **toolchain:** allow hooking to existing game server process ([#563](https://github.com/rivet-gg/toolchain/issues/563)) ([ba8a189](https://github.com/rivet-gg/toolchain/commit/ba8a189904cd8ce4a1b0e17fe99aee06f533c9ce))
+* **toolchain:** rename default buildx builder from rivet_cli -&gt; rivet_toolchain ([#560](https://github.com/rivet-gg/toolchain/issues/560)) ([6d18ff8](https://github.com/rivet-gg/toolchain/commit/6d18ff83b5ea205cc06e83f4b37d1c10d1bff992))
+
 ## [2.0.0-rc.6](https://github.com/rivet-gg/toolchain/compare/v2.0.0-rc.5...v2.0.0-rc.6) (2024-10-03)
 
 
